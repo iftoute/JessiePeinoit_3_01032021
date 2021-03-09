@@ -1,0 +1,21 @@
+{
+  "name": "jessiepeinoit_3_01032021",
+  "version": "1.0.0",
+  "description": "Projet ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iftoute/JessiePeinoit_3_01032021.git"
+  },
+  "author": "jessie",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/iftoute/JessiePeinoit_3_01032021/issues"
+  },
+  "homepage": "https://github.com/iftoute/JessiePeinoit_3_01032021#readme"
+}
