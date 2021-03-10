@@ -1,5 +1,10 @@
 @mixin font-heading {
     font-family: 'Shrikhand', cursive;
-    color: black;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+@mixin text-color ($color: black){
+    @if (lightness($color) < 25% ) {
+        $color: lighten($color, 100%);
+    }
 }
