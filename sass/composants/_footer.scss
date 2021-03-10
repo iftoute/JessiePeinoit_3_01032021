@@ -4,7 +4,9 @@ footer {
     a {
         display: flex;
         align-items: center;
-        @include text-color;
+        /*ne-fonctionne-pas-avec-la-mixin*/
+        /*@include text-color;*/
+        color: white;
     }
     h4 {
         color: white;
