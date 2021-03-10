@@ -21,11 +21,17 @@ a {
 
 input {
   border: none;
+  background-color: transparent;
+  max-width: 230px;
+}
+
+i {
+  color: #525252;
 }
 
 header {
-  padding: 20px 0 10px 0;
-  box-shadow: 0 3px 2px lightgray;
+  padding: 25px 0 10px 0;
+  box-shadow: 0 2px 20px #bfbfbf;
 }
 header .header__logo {
   width: 100%;
@@ -36,6 +42,74 @@ header img {
   width: 150px;
 }
 
+/*--section-location--*/
+.location {
+  margin-top: 3px;
+  background-color: #ededed;
+  padding: 15px 0;
+}
+.location .loc__input {
+  display: flex;
+  justify-content: center;
+}
+.location .loc__input i {
+  font-size: 1rem;
+}
+.location .loc__input input {
+  font-size: 1rem;
+  padding-left: 20px;
+}
+.location .loc__input ::placeholder {
+  color: black;
+}
+
+/*--section-explore--*/
+.explore {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 40px;
+}
+.explore .explore__title {
+  padding-bottom: 15px;
+}
+.explore h2 {
+  margin: 0;
+  padding: 0 10px;
+}
+.explore p {
+  font-weight: 100;
+}
+.explore button {
+  border: none;
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 2rem;
+  /*ne-fonctionne-pas-avec-la-variable*/
+  /*background: linear-gradient ($color-secondary, $color-primary);*/
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+}
+
+/*--section-operation--*/
+.operation {
+  padding: 30px 30px;
+}
+.operation .operation__title {
+  font-size: 1.2rem;
+}
+.operation .operation__step {
+  display: flex;
+  align-items: center;
+  border-radius: 1.3rem;
+  padding: 15px;
+  margin: 20px 0;
+  background: #f0f0f0;
+  position: relative;
+}
+.operation i {
+  margin-right: 20px;
+}
+
 footer {
   background-color: #373333;
   padding: 5px 0 30px 20px;
@@ -43,6 +117,9 @@ footer {
 footer a {
   display: flex;
   align-items: center;
+  /*ne-fonctionne-pas-avec-la-mixin*/
+  /*@include text-color;*/
+  color: white;
 }
 footer h4 {
   color: white;
