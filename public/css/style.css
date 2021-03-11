@@ -69,7 +69,7 @@ header img {
   text-align: center;
   padding: 40px;
 }
-.explore .explore__title {
+.explore__title {
   padding-bottom: 15px;
 }
 .explore h2 {
@@ -85,9 +85,10 @@ header img {
   font-size: 1rem;
   border-radius: 2rem;
   /*ne-fonctionne-pas-avec-la-variable*/
-  /*background: linear-gradient ($color-secondary, $color-primary);*/
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient #FF79DA, #9356DC;
+  /*background: linear-gradient(#FF79DA, #9356DC);*/
   color: white;
+  box-shadow: 0 4px 10px #bfbfbf;
 }
 
 /*--section-operation--*/
@@ -105,6 +106,7 @@ header img {
   margin: 20px 0;
   background: #f0f0f0;
   position: relative;
+  box-shadow: 0 4px 10px #bfbfbf;
 }
 .operation .operation__step__number {
   position: relative;
@@ -114,12 +116,59 @@ header img {
   font-size: 0.8rem;
   margin-left: -9%;
   background-color: #9356DC;
-  /*ne-fonctionne-pas-avec-la-variable*/
+  /*ne-fonctionne-pas-avec-la-variable???*/
 }
 .operation i {
   margin-right: 20px;
   margin-left: 10px;
   font-size: 1.1rem;
+}
+
+/*--section-restaurant--*/
+.restaurant {
+  background-color: #f7f7f7;
+  padding: 30px 0;
+}
+.restaurant .restaurant__title {
+  font-size: 1.3rem;
+  padding-left: 30px;
+}
+
+.restaurant__card {
+  width: 88%;
+  margin: 30px auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px #bfbfbf;
+  position: relative;
+}
+.restaurant__card .restaurant__card__flag {
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 5px 10px;
+  top: 5%;
+  left: 75%;
+  font-size: 0.8rem;
+  color: #05785b;
+}
+.restaurant__card img {
+  border-radius: 20px 20px 0 0;
+  height: 170px;
+}
+.restaurant__card .restaurant__card__name--bold {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 15px 0 5px 15px;
+}
+.restaurant__card .restaurant__card__loc {
+  font-weight: 300;
+  margin: 0;
+  padding: 5px 0 20px 15px;
+}
+.restaurant__card .restaurant__card__heart {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  font-size: 1.4rem;
 }
 
 footer {
@@ -140,6 +189,7 @@ footer h4 {
 footer i {
   margin-right: 10px;
   font-size: 0.8rem;
+  color: white;
 }
 footer p {
   margin: 5px 0;

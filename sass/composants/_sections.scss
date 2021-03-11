@@ -1,3 +1,4 @@
+@import "./../utils/variables";
 /*--section-location--*/
 .location {
     margin-top: 3px;
@@ -25,7 +26,7 @@
     background-color: rgb(247, 247, 247);
     text-align: center;
     padding: 40px;
-    .explore__title {
+    &__title {
         padding-bottom: 15px;
     }
     h2 {
@@ -41,9 +42,10 @@
         font-size: 1rem;
         border-radius: 2rem;
         /*ne-fonctionne-pas-avec-la-variable*/
-        /*background: linear-gradient ($color-secondary, $color-primary);*/
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient ($color-secondary, $color-primary);
+        /*background: linear-gradient(#FF79DA, #9356DC);*/
         color: white;
+        box-shadow: 0 4px 10px rgb(191, 191, 191);
     }
 }
 
@@ -62,6 +64,7 @@
         margin: 20px 0;
         background: rgb(240, 240, 240);
         position: relative;
+        box-shadow: 0 4px 10px rgb(191, 191, 191);
     }
     .operation__step__number {
         position: relative;
@@ -70,11 +73,60 @@
         color: white;
         font-size: 0.8rem;
         margin-left: -9%;
-        background-color: #9356DC; /*ne-fonctionne-pas-avec-la-variable*/
+        background-color: #9356DC; /*ne-fonctionne-pas-avec-la-variable???*/
     }
     i {
         margin-right: 20px;
         margin-left: 10px;
         font-size: 1.1rem;
     }
+}
+
+/*--section-restaurant--*/
+.restaurant {
+    background-color: rgb(247, 247, 247);
+    padding: 30px 0;
+    .restaurant__title {
+        font-size: 1.3rem;
+        padding-left: 30px;
+    }
+}
+
+.restaurant__card {
+    width: 88%;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 20px rgb(191, 191, 191);
+    position: relative;
+    .restaurant__card__flag {
+        position: absolute;
+        background-color: #99E2D0;
+        padding: 5px 10px;
+        top: 5%;
+        left: 75%;
+        font-size: 0.8rem;
+        color: #05785b;
+    }
+    img {
+        border-radius: 20px 20px 0 0 ;
+        height: 170px;
+    }
+    .restaurant__card__name--bold {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin: 15px 0 5px 15px;
+    }
+    .restaurant__card__loc {
+        font-weight: 300;
+        margin: 0;
+        padding: 5px 0 20px 15px;
+
+    }
+    .restaurant__card__heart {
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        font-size: 1.4rem;
+    }
+
 }
