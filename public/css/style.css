@@ -140,12 +140,12 @@ header img {
   background: #f8efff;
 }
 
-i {
+.operation__step i {
   margin-right: 20px;
   margin-left: 20px;
   font-size: 1.1rem;
 }
-i:hover {
+.operation__step i:hover {
   color: #9356DC;
   /*changement de couleur au survol ne fonctionne pas */
 }
