@@ -85,43 +85,85 @@ header img {
   font-size: 1rem;
   border-radius: 2rem;
   /*ne-fonctionne-pas-avec-la-variable*/
-  background: linear-gradient #FF79DA, #9356DC;
-  /*background: linear-gradient(#FF79DA, #9356DC);*/
+  background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 0 4px 10px #bfbfbf;
 }
+.explore button:hover {
+  opacity: 0.8;
+  box-shadow: 0 8px 10px #797979;
+}
 
-/*--section-operation--*/
+/*--section-operation (fonctionnement)--*/
 .operation {
   padding: 30px 30px;
 }
-.operation .operation__title {
+@media screen and (min-width: 800px) {
+  .operation {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.operation__title {
   font-size: 1.2rem;
 }
-.operation .operation__step {
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .operation__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 800px) {
+  .operation__title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.operation__step {
   display: flex;
   align-items: center;
   border-radius: 1.3rem;
   padding: 15px;
-  margin: 20px 0;
+  margin: 20px auto;
   background: #f0f0f0;
   position: relative;
   box-shadow: 0 4px 10px #bfbfbf;
+  max-width: 90%;
 }
-.operation .operation__step__number {
-  position: relative;
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .operation__step {
+    justify-content: center;
+  }
+}
+.operation__step:hover {
+  background: #f8efff;
+}
+
+i {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+i:hover {
+  color: #9356DC;
+  /*changement de couleur au survol ne fonctionne pas */
+}
+
+.operation__step__number {
+  position: absolute;
+  left: -5%;
   padding: 5px 10px;
   border-radius: 50%;
   color: white;
   font-size: 0.8rem;
-  margin-left: -9%;
   background-color: #9356DC;
-  /*ne-fonctionne-pas-avec-la-variable???*/
+  /*couleur-ne-fonctionne-pas-avec-la-variable???*/
 }
-.operation i {
-  margin-right: 20px;
-  margin-left: 10px;
-  font-size: 1.1rem;
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .operation__step__number {
+    left: -2%;
+  }
 }
 
 /*--section-restaurant--*/
@@ -129,9 +171,30 @@ header img {
   background-color: #f7f7f7;
   padding: 30px 0;
 }
-.restaurant .restaurant__title {
+.restaurant__title {
   font-size: 1.3rem;
   padding-left: 30px;
+}
+@media screen and (min-width: 800px) {
+  .restaurant__title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  a {
+    width: 40%;
+    margin: auto;
+  }
 }
 
 .restaurant__card {
@@ -141,7 +204,12 @@ header img {
   box-shadow: 0 2px 20px #bfbfbf;
   position: relative;
 }
-.restaurant__card .restaurant__card__flag {
+@media screen and (min-width: 800px) {
+  .restaurant__card {
+    width: 100%;
+  }
+}
+.restaurant__card__flag {
   position: absolute;
   background-color: #99E2D0;
   padding: 5px 10px;
@@ -175,19 +243,37 @@ footer {
   background-color: #373333;
   padding: 5px 0 30px 20px;
 }
+@media screen and (min-width: 800px) {
+  footer {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 footer a {
   display: flex;
   align-items: center;
-  /*ne-fonctionne-pas-avec-la-mixin*/
-  /*@include text-color;*/
   color: white;
+}
+@media screen and (min-width: 800px) {
+  footer a {
+    width: 20%;
+    justify-content: center;
+  }
 }
 footer h4 {
   color: white;
   margin: 20px 0;
+  font-weight: 400;
+}
+@media screen and (min-width: 800px) {
+  footer h4 {
+    width: 100%;
+  }
 }
 footer i {
   margin-right: 10px;
+  margin-left: 0;
   font-size: 0.8rem;
   color: white;
 }

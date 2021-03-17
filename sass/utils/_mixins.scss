@@ -3,8 +3,14 @@
     font-size: 1.2rem;
 }
 
-@mixin text-color ($color: black){
-    @if (lightness($color) < 25% ) {
-        $color: lighten($color, 100%);
+@mixin tablette {
+    @media screen and (min-width: 500px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 800px) {
+        @content;
     }
 }
