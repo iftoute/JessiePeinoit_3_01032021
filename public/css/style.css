@@ -292,13 +292,20 @@ header img {
   position: relative;
 }
 
+.restaurant__card__heart i.far:hover {
+  color: transparent;
+  animation: like-hidden 0.5s linear;
+}
+
 .restaurant__card__heart i.fas {
   opacity: 0;
   z-index: 5;
-  background: linear-gradient(to top, pink, purple);
+  background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   color: transparent;
   position: absolute;
+  top: 0;
+  left: 0;
   overflow: hidden;
 }
 
@@ -308,6 +315,14 @@ header img {
 }
 
 @keyframes like {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes like-hidden {
   0% {
     opacity: 0;
   }
