@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/style.css">
     <title>ohmyfood</title>
+    <meta name="title" content="Accueil - ohmyfood!">
+    <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants.">
 </head>
 <body>
+    <!--loader-->
+    <div class="loading loading__spinner"></div>
     <!--header/accueil-->
    <header>
         <!--header__logo-->
@@ -83,13 +87,15 @@
                     <div class="restaurant__card__pic">
                         <img src="images/restaurants/la palette du gout.jpg" alt="la palette du gout">
                     </div>
-                    <div class="restaurant__card__content">
-                        <p class="restaurant__card__name--bold">La palette du goût</p>
-                        <p class="restaurant__card__loc">Ménilmontant</p>
-                    </div>
-                    <div class="restaurant__card__heart">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
+                    <div class="restaurant__card__descriptif">
+                        <div class="restaurant__card__content">
+                            <p class="restaurant__card__name--bold">La palette du goût</p>
+                            <p class="restaurant__card__loc">Ménilmontant</p>
+                        </div>
+                        <div class="restaurant__card__heart">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
                     </div>
                 </div>
             </a>
