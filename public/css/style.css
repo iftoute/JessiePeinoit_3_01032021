@@ -296,7 +296,10 @@ section.restaurant .restaurant__title {
   font-size: 0.5rem;
   top: 0;
   left: 0;
-  z-index: -50;
+  z-index: -1;
+}
+.svg:hover {
+  z-index: 100;
 }
 
 /*@keyframes like {
