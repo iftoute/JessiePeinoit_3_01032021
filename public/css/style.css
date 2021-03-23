@@ -1,0 +1,363 @@
+h1, h4 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  max-width: 230px;
+}
+
+i {
+  color: #525252;
+}
+
+header {
+  padding: 25px 0 10px 0;
+  box-shadow: 0 2px 20px #bfbfbf;
+}
+header .header__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header img {
+  width: 150px;
+}
+
+/*----------------------------------------------------
+                     LOADER
+----------------------------------------------------*/
+.loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: loading 2s ease-in-out 1s 1 normal forwards;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 90px;
+  background-color: #FF79DA;
+  animation: loader 1s linear infinite;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 30px;
+  height: 90px;
+  background-color: #99E2D0;
+  animation: loader 1s linear 1s infinite;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 30px;
+  height: 90px;
+  background-color: #9356DC;
+  animation: loader 1s linear 1s infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+/*----------------------------------------------------
+                     SECTION LOCATION
+----------------------------------------------------*/
+.location {
+  margin-top: 3px;
+  background-color: #ededed;
+  padding: 15px 0;
+}
+.location .loc__input {
+  display: flex;
+  justify-content: center;
+}
+.location .loc__input i {
+  font-size: 1rem;
+}
+.location .loc__input input {
+  font-size: 1rem;
+  padding-left: 20px;
+}
+.location .loc__input ::placeholder {
+  color: black;
+}
+
+/*----------------------------------------------------
+                     SECTION EXPLORE
+----------------------------------------------------*/
+.explore {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 40px;
+}
+.explore__title {
+  padding-bottom: 15px;
+}
+.explore h2 {
+  margin: 0;
+  padding: 0 10px;
+}
+.explore p {
+  font-weight: 100;
+}
+.explore button {
+  border: none;
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 2rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  box-shadow: 0 4px 10px #bfbfbf;
+}
+.explore button:hover {
+  opacity: 0.8;
+  box-shadow: 0 8px 10px #797979;
+  transition: all 0.4s ease-in-out;
+}
+
+/*----------------------------------------------------
+            SECTION OPERATION (FONCTIONNEMENT)
+----------------------------------------------------*/
+/*--section-operation (fonctionnement)--*/
+.operation {
+  padding: 30px 30px;
+}
+@media screen and (min-width: 800px) {
+  .operation {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.operation__title {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .operation__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 800px) {
+  .operation__title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.operation__step {
+  display: flex;
+  align-items: center;
+  border-radius: 1.3rem;
+  padding: 15px;
+  margin: 20px auto;
+  background: #f0f0f0;
+  position: relative;
+  box-shadow: 0 4px 10px #bfbfbf;
+  max-width: 90%;
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .operation__step {
+    justify-content: center;
+  }
+}
+.operation__step:hover {
+  background: #f8efff;
+  transition: all 0.3s ease-in-out;
+}
+
+.operation__step i {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+.operation__step i:hover {
+  color: #9356DC;
+}
+
+.operation__step__number {
+  position: absolute;
+  left: -5%;
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.8rem;
+  background-color: #9356DC;
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .operation__step__number {
+    left: -2%;
+  }
+}
+
+/*----------------------------------------------------
+                     SECTION RESTAURANT
+----------------------------------------------------*/
+section.restaurant {
+  background-color: #f7f7f7;
+  padding: 30px 0;
+}
+@media screen and (min-width: 800px) {
+  section.restaurant {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+section.restaurant .restaurant__title {
+  font-size: 1.3rem;
+  padding-left: 30px;
+}
+@media screen and (min-width: 800px) {
+  section.restaurant .restaurant__title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.restaurant .container {
+  width: 88%;
+  margin: 30px auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px #bfbfbf;
+  position: relative;
+}
+@media screen and (min-width: 800px) {
+  .restaurant .container {
+    width: 100%;
+  }
+}
+.restaurant .flag {
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 5px 10px;
+  top: 5%;
+  left: 75%;
+  font-size: 0.8rem;
+  color: #05785b;
+}
+.restaurant .pic {
+  border-radius: 20px 20px 0 0;
+  height: 170px;
+  overflow: hidden;
+}
+.restaurant .descriptif {
+  position: relative;
+}
+.restaurant .name--bold {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 15px 0 5px 15px;
+}
+.restaurant .loc {
+  font-weight: 300;
+  margin: 0;
+  padding: 5px 0 20px 15px;
+}
+.restaurant .like {
+  position: absolute;
+  top: 20%;
+  left: 85%;
+}
+.restaurant .like > i {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+.restaurant .like i.fas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0;
+}
+.restaurant .like i.fas:hover {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: like 0.4s ease;
+}
+
+@keyframes like {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+footer {
+  background-color: #373333;
+  padding: 5px 0 30px 20px;
+}
+footer a {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+footer h4 {
+  color: white;
+  margin: 20px 0;
+  font-weight: 400;
+}
+footer i {
+  margin-right: 10px;
+  margin-left: 0;
+  font-size: 0.8rem;
+  color: white;
+}
+footer p {
+  margin: 5px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
