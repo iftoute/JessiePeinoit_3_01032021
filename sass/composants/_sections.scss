@@ -19,7 +19,7 @@ $color-tertiary: #99E2D0;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
-    height: 105vh;
+    height: 100%;
   }
   
   .loading::after {
@@ -98,6 +98,7 @@ $color-tertiary: #99E2D0;
         &:hover {
            opacity: 0.8;
            box-shadow: 0 8px 10px rgb(121, 121, 121);
+           transition: all 0.4s ease-in-out;
         }
     }
 }
@@ -138,6 +139,7 @@ $color-tertiary: #99E2D0;
     }
         &:hover {
         background: #f8efff;
+        transition: all 0.3s ease-in-out;
         }
 }
 
@@ -165,14 +167,15 @@ $color-tertiary: #99E2D0;
     }
 
 /*--section-restaurant--*/
-.restaurant {
+
+section.restaurant {
     background-color: rgb(247, 247, 247);
     padding: 30px 0;
     @include desktop {
-    //    display: flex;
-    //  flex-wrap: wrap;
-    }
-    &__title {
+        display: flex;
+        flex-wrap: wrap;
+     }
+    .restaurant__title {
         font-size: 1.3rem;
         padding-left: 30px;
         @include desktop {
@@ -182,94 +185,68 @@ $color-tertiary: #99E2D0;
         }
     }
 }
-
 .restaurant {
-    @include desktop {
-       display: flex;
-       flex-wrap: wrap;
+    .container {
+        width: 88%;
+        margin: 30px auto;
+        border-radius: 20px;
+        box-shadow: 0 2px 20px rgb(191, 191, 191);
+        position: relative;
+            @include desktop {
+                width: 100%;
+            }
+        }
+    .flag {
+        position: absolute;
+        background-color: #99E2D0;
+        padding: 5px 10px;
+        top: 5%;
+        left: 75%;
+        font-size: 0.8rem;
+        color: #05785b; 
     }
-}
-
-a {
-    @include desktop {
-        width: 40%;
-        margin: auto;
+    .pic {
+        border-radius: 20px 20px 0 0 ;
+        height: 170px;
+        overflow: hidden; 
     }
-}
-
-.restaurant__card {
-    width: 88%;
-    margin: 30px auto;
-    border-radius: 20px;
-    box-shadow: 0 2px 20px rgb(191, 191, 191);
-    position: relative;
-        @include desktop {
-            width: 100%;
-        }
-        &__flag {
-            position: absolute;
-            background-color: #99E2D0;
-            padding: 5px 10px;
-            top: 5%;
-            left: 75%;
-            font-size: 0.8rem;
-            color: #05785b;
-        }
-        img {
-            border-radius: 20px 20px 0 0 ;
-            height: 170px;
-        }
-}
-
-.restaurant__card__descriptif {
-    display: flex;
-    justify-content: space-between;
-}
-
-.restaurant__card__name--bold {
+    .descriptif {
+        position: relative;
+    }
+    .name--bold {
         font-weight: 700;
         font-size: 1.1rem;
         margin: 15px 0 5px 15px;
-}
-.restaurant__card__loc {
-    font-weight: 300;
-     margin: 0;
-    padding: 5px 0 20px 15px;
-}
-.restaurant__card__heart {
-    font-size: 1.5rem;
-    margin: 30px;
-}
-
-.restaurant__card__heart i.far {
-    z-index: 1;
-    position: relative;
-   }
-
-.restaurant__card__heart i.far:hover {
-    color: transparent;
-    animation: like-hidden 0.5s linear;
-}
-
-.restaurant__card__heart i.fas {
-    opacity: 0;
-    z-index: 5;
-    background: linear-gradient(to top, $color-secondary, $color-primary);
-    background-clip: text;
-    color: transparent;
-    position: absolute;
-    //top: 0;
-    //left: 0;
-    overflow: hidden;
-}
-
-.restaurant__card__heart i.fas:hover {
-        animation: like 0.5s linear;
-        animation-fill-mode: forwards;
+    }
+    .loc {
+        font-weight: 300;
+        margin: 0;
+        padding: 5px 0 20px 15px;
+    }
+    .like {
+        position: absolute;
+        top: 20%; left: 85%;
+        & > i {
+            font-size: 1.5rem;
+        }
+    i.far {
+        &:hover {
+            opacity: 0;
+            transition: opacity .2s ease;
+        }
+    }
+    i.fas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        }
+    }
 }
 
 
-@keyframes like {
+
+/*@keyframes like {
     0% {
         opacity: 0;
     }
@@ -285,7 +262,7 @@ a {
     100% {
         opacity: 1;
     }
-}
+}*/
 
 
 
