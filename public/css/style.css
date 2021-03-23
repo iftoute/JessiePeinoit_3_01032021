@@ -279,46 +279,34 @@ section.restaurant .restaurant__title {
 }
 .restaurant .like > i {
   font-size: 1.5rem;
-}
-.restaurant .like i.far:hover {
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  background-color: transparent;
 }
 .restaurant .like i.fas {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 5;
+  opacity: 0;
+}
+.restaurant .like i.fas:hover {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: like 0.4s ease;
 }
 
-.svg {
-  position: absolute;
-  font-size: 0.5rem;
-  top: 0;
-  left: 0;
-  z-index: -1;
+@keyframes like {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.svg:hover {
-  z-index: 100;
-}
-
-/*@keyframes like {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes like-hidden {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}*/
 footer {
   background-color: #373333;
   padding: 5px 0 30px 20px;

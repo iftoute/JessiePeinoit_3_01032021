@@ -226,54 +226,38 @@ section.restaurant {
     .like {
         position: absolute;
         top: 20%; left: 85%;
-        & > i {
+            & > i {
             font-size: 1.5rem;
+            background-color: transparent;
         }
-    i.far {
-        &:hover {
-            opacity: 0;
-            transition: opacity .2s ease;
-        }
-    }
+
     i.fas {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 5;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+            background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: like .4s ease;
+        }
         }
     }
 }
-.svg {
-    position: absolute;
-    font-size: 0.5rem;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    &:hover {
-        z-index: 100;
-    }
-}
 
-
-
-/*@keyframes like {
+@keyframes like {
     0% {
         opacity: 0;
+    }
+    50% {
+        opacity: .5;
     }
     100% {
         opacity: 1;
     }
 }
-
-@keyframes like-hidden {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}*/
-
-
 
 
