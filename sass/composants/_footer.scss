@@ -2,28 +2,17 @@
 footer {
     background-color: #373333;
     padding: 5px 0 30px 20px;
-    @include desktop {
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
+   
     
     a {
         display: flex;
         align-items: center;
         color: white;
-        @include desktop {
-            width: 20%;
-            justify-content: center;
-        }  
     }
     h4 {
         color: white;
         margin: 20px 0;
         font-weight: 400;
-        @include desktop {
-            width: 100%;
-        }  
     }
     i {
         margin-right: 10px;

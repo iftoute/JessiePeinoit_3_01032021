@@ -42,50 +42,74 @@ header img {
   width: 150px;
 }
 
+/*----------------------------------------------------
+                     LOADER
+----------------------------------------------------*/
 .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  animation: loader 2s ease-in-out 1s 1 normal forwards;
-}
-
-.loading__spinner {
-  position: absolute;
+  position: fixed;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10000;
   background-color: rgba(255, 255, 255, 0.8);
-  width: 100%;
-  height: 100%;
+  animation: loading 2s ease-in-out 1s 1 normal forwards;
 }
 
-.loading::after {
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 90px;
+  background-color: #FF79DA;
+  animation: loader 1s linear infinite;
+}
+.loader::before {
   content: "";
-  width: 150px;
-  height: 150px;
-  border: 20px solid #99E2D0;
-  border-top-color: #9356DC;
-  border-radius: 50%;
-  transform: rotate(0.16turn);
-  animation: loading 1s ease infinite;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 30px;
+  height: 90px;
+  background-color: #99E2D0;
+  animation: loader 1s linear 1s infinite;
 }
 
-@keyframes loading {
-  from {
-    transform: rotate(0turn);
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 30px;
+  height: 90px;
+  background-color: #9356DC;
+  animation: loader 1s linear 1s infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
   }
-  to {
-    transform: rotate(1turn);
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
   }
 }
-@keyframes loader {
+@keyframes loading {
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
-/*--section-location--*/
+/*----------------------------------------------------
+                     SECTION LOCATION
+----------------------------------------------------*/
 .location {
   margin-top: 3px;
   background-color: #ededed;
@@ -106,7 +130,9 @@ header img {
   color: black;
 }
 
-/*--section-explore--*/
+/*----------------------------------------------------
+                     SECTION EXPLORE
+----------------------------------------------------*/
 .explore {
   background-color: #f7f7f7;
   text-align: center;
@@ -127,7 +153,6 @@ header img {
   padding: 20px;
   font-size: 1rem;
   border-radius: 2rem;
-  /*ne-fonctionne-pas-avec-la-variable*/
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 0 4px 10px #bfbfbf;
@@ -138,6 +163,9 @@ header img {
   transition: all 0.4s ease-in-out;
 }
 
+/*----------------------------------------------------
+            SECTION OPERATION (FONCTIONNEMENT)
+----------------------------------------------------*/
 /*--section-operation (fonctionnement)--*/
 .operation {
   padding: 30px 30px;
@@ -202,7 +230,6 @@ header img {
   color: white;
   font-size: 0.8rem;
   background-color: #9356DC;
-  /*couleur-ne-fonctionne-pas-avec-la-variable???*/
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .operation__step__number {
@@ -210,7 +237,9 @@ header img {
   }
 }
 
-/*--section-restaurant--*/
+/*----------------------------------------------------
+                     SECTION RESTAURANT
+----------------------------------------------------*/
 section.restaurant {
   background-color: #f7f7f7;
   padding: 30px 0;
@@ -311,33 +340,15 @@ footer {
   background-color: #373333;
   padding: 5px 0 30px 20px;
 }
-@media screen and (min-width: 800px) {
-  footer {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 footer a {
   display: flex;
   align-items: center;
   color: white;
 }
-@media screen and (min-width: 800px) {
-  footer a {
-    width: 20%;
-    justify-content: center;
-  }
-}
 footer h4 {
   color: white;
   margin: 20px 0;
   font-weight: 400;
-}
-@media screen and (min-width: 800px) {
-  footer h4 {
-    width: 100%;
-  }
 }
 footer i {
   margin-right: 10px;
