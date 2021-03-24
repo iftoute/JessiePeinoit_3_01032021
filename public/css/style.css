@@ -1,12 +1,27 @@
+@charset "UTF-8";
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
 h1, h4 {
   font-family: "Shrikhand", cursive;
   font-size: 1.2rem;
 }
 
-body {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 15px;
+}
+h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 40px;
+  background: #99E2D0;
+  margin-top: 5px;
 }
 
 img {
@@ -40,6 +55,12 @@ header .header__logo {
 }
 header img {
   width: 150px;
+}
+header .fa-arrow-left {
+  position: absolute;
+  left: 30px;
+  font-size: 1.1rem;
+  color: black;
 }
 
 /*----------------------------------------------------
@@ -359,5 +380,67 @@ footer i {
 footer p {
   margin: 5px 0;
 }
+
+/*----------------------------------------------------
+                     SECTION BANNIERE RESTAURANT
+----------------------------------------------------*/
+.restaurant__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: -50px;
+  background-color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.restaurant__title h1 {
+  font-size: 2rem;
+}
+
+.restaurant.like {
+  position: relative;
+}
+
+.far, .fas {
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+i.far.fa-heart {
+  z-index: -1;
+}
+
+i.fas.fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0;
+}
+i.fas.fa-heart:hover {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: like 0.4s ease;
+}
+
+@keyframes like {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*----------------------------------------------------
+                     SECTION ENTRÉES RESTAURANT
+----------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

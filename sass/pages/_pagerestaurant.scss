@@ -1,0 +1,65 @@
+@import "./../utils/variables";
+
+  /*----------------------------------------------------
+                     SECTION BANNIERE RESTAURANT
+----------------------------------------------------*/
+
+.restaurant__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: -50px;
+    background-color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    h1 {
+        font-size: 2rem;
+    }
+}
+.restaurant.like {
+    position: relative;
+}
+
+.far, .fas {
+        font-size: 2rem;
+        background-color: transparent;
+} 
+
+i.far.fa-heart {
+    z-index: -1;
+}
+
+
+i.fas.fa-heart {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 5;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: like .4s ease;
+        }
+    }
+
+@keyframes like {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+  /*----------------------------------------------------
+                     SECTION ENTRÉES RESTAURANT
+----------------------------------------------------*/
+
