@@ -16,7 +16,7 @@
     padding-left: 20px;
     padding-right: 20px;
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 .restaurant.like {
@@ -32,7 +32,6 @@ i.far.fa-heart {
     z-index: -1;
 }
 
-
 i.fas.fa-heart {
     position: absolute;
     top: 0; left: 0;
@@ -44,8 +43,8 @@ i.fas.fa-heart {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: like .4s ease;
-        }
     }
+}
 
 @keyframes like {
     0% {
@@ -60,6 +59,91 @@ i.fas.fa-heart {
 }
 
   /*----------------------------------------------------
-                     SECTION ENTRÉES RESTAURANT
+                     SECTION MENU
 ----------------------------------------------------*/
 
+.menu {
+    display: flex;
+    box-shadow: 0 4px 10px rgb(191, 191, 191);
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+    cursor: pointer;
+    &__description {
+        display: inline-block;
+        width: 80%;
+        margin-left: 20px;
+        padding-right: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        & .bold {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 15px 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+                & + p{
+                margin: 0 0 15px 0;
+                font-weight: 300;
+                font-size: 1.2rem;
+                text-overflow: ellipsis;
+                overflow: hidden;       
+            }
+        }
+    }
+}
+
+.menu__price {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $color-tertiary;
+    opacity: 0.5;
+    overflow: hidden;
+    transform: translate(90px, 0%);
+    &:hover {
+        transform: translate(0);
+        animation: translate .3s linear forwards;
+    }
+    
+i.fas.fa-check-circle {
+        color: white;
+        transform: rotate(180deg);
+        &:hover {
+            animation: rotate .3s linear;
+        }
+        
+    }
+}
+
+@keyframes translate {
+    0% {
+        transform: translate(90px, 0%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
