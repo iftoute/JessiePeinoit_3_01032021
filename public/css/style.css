@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -161,9 +162,11 @@ header .fa-arrow-left {
 .explore__title {
   padding-bottom: 15px;
 }
-.explore h2 {
+.explore h3 {
   margin: 0;
   padding: 0 10px;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 .explore p {
   font-weight: 100;
@@ -208,7 +211,7 @@ header .fa-arrow-left {
   .operation__title {
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -264,24 +267,26 @@ section.restaurant {
   background-color: #f7f7f7;
   padding: 30px 0;
 }
+
 @media screen and (min-width: 800px) {
-  section.restaurant {
+  .restaurant.section {
     display: flex;
     flex-wrap: wrap;
   }
 }
-section.restaurant .restaurant__title {
-  font-size: 1.3rem;
-  padding-left: 30px;
+
+.restaurant h3 {
+  margin-left: 30px;
+  font-size: 1.5rem;
 }
 @media screen and (min-width: 800px) {
-  section.restaurant .restaurant__title {
+  .restaurant h3 {
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
+    margin-right: 30px;
   }
 }
-
 .restaurant .container {
   width: 88%;
   margin: 30px auto;
@@ -291,7 +296,7 @@ section.restaurant .restaurant__title {
 }
 @media screen and (min-width: 800px) {
   .restaurant .container {
-    width: 100%;
+    width: 75%;
   }
 }
 .restaurant .flag {
@@ -327,7 +332,7 @@ section.restaurant .restaurant__title {
   left: 85%;
 }
 .restaurant .like > i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   background-color: transparent;
 }
 .restaurant .like i.fas {
@@ -383,6 +388,11 @@ footer p {
 /*----------------------------------------------------
                      SECTION BANNIERE RESTAURANT
 ----------------------------------------------------*/
+.restaurant__banner img {
+  /*image bannière header*/
+  max-height: 450px;
+}
+
 .restaurant__title {
   display: flex;
   align-items: center;
@@ -396,30 +406,26 @@ footer p {
   padding-right: 20px;
 }
 .restaurant__title h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
-.restaurant.like {
+.likes {
   position: relative;
+  top: 0;
+  left: 0;
 }
-
-.far, .fas {
+.likes > i {
   font-size: 2rem;
   background-color: transparent;
 }
-
-i.far.fa-heart {
-  z-index: -1;
-}
-
-i.fas.fa-heart {
+.likes i.fas {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
   opacity: 0;
 }
-i.fas.fa-heart:hover {
+.likes i.fas:hover {
   opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
@@ -490,20 +496,16 @@ i.fas.fa-heart:hover {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
-  opacity: 0.5;
+  width: 0;
   overflow: hidden;
-  transform: translate(90px, 0%);
 }
 .check:hover {
-  transform: translate(0);
-  animation: translate 0.3s linear forwards;
+  width: 50px;
 }
-.check i.fas.fa-check-circle {
+
+i.fas.fa-check-circle {
   color: white;
-  transform: rotate(180deg);
-}
-.check i.fas.fa-check-circle:hover {
-  animation: rotate 0.3s linear;
+  font-size: 1.7rem;
 }
 
 @keyframes translate {

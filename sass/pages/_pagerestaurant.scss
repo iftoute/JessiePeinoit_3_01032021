@@ -4,6 +4,10 @@
                      SECTION BANNIERE RESTAURANT
 ----------------------------------------------------*/
 
+.restaurant__banner img {  /*image bannière header*/
+    max-height: 450px;
+}
+
 .restaurant__title {
     display: flex;
     align-items: center;
@@ -16,25 +20,22 @@
     padding-left: 20px;
     padding-right: 20px;
     h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
-.restaurant.like {
-    position: relative;
-}
 
-.far, .fas {
+.likes {
+    position: relative;
+    top: 0; left: 0;
+        & > i {
         font-size: 2rem;
         background-color: transparent;
-} 
+    }
 
-i.far.fa-heart {
-    z-index: -1;
-}
-
-i.fas.fa-heart {
+i.fas {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     z-index: 5;
     opacity: 0;
     &:hover {
@@ -43,19 +44,20 @@ i.fas.fa-heart {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: like .4s ease;
+        }
     }
 }
 
 @keyframes like {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: .5;
-    }
-    100% {
-        opacity: 1;
-    }
+0% {
+    opacity: 0;
+}
+50% {
+    opacity: .5;
+}
+100% {
+    opacity: 1;
+}
 }
 
   /*----------------------------------------------------
@@ -111,23 +113,17 @@ i.fas.fa-heart {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: $color-tertiary;
-    opacity: 0.5;
+    width: 0;
     overflow: hidden;
-    transform: translate(90px, 0%);
     &:hover {
-        transform: translate(0);
-        animation: translate .3s linear forwards;
+        width: 50px;
+    }
     }
     
 i.fas.fa-check-circle {
         color: white;
-        transform: rotate(180deg);
-        &:hover {
-            animation: rotate .3s linear;
-        }
-        
+        font-size: 1.7rem;       
     }
-}
 
 @keyframes translate {
     0% {
