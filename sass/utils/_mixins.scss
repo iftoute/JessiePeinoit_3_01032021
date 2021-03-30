@@ -14,3 +14,18 @@
         @content;
     }
 }
+
+@mixin button {
+    border: none;
+    font-size: 1rem;
+    border-radius: 2rem;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: white;
+    box-shadow: 0 4px 10px rgb(191, 191, 191);
+    cursor: pointer;
+    &:hover {
+       opacity: 0.8;
+       box-shadow: 0 8px 10px rgb(121, 121, 121);
+       transition: all 0.4s ease-in-out;
+    }
+}
