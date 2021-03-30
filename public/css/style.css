@@ -64,6 +64,9 @@ header .fa-arrow-left {
   color: black;
 }
 
+/*$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;*/
 /*----------------------------------------------------
                      LOADER
 ----------------------------------------------------*/
@@ -174,12 +177,13 @@ header .fa-arrow-left {
 }
 .explore button {
   border: none;
-  padding: 20px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   border-radius: 2rem;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 0 4px 10px #bfbfbf;
+  cursor: pointer;
+  padding: 20px 30px;
 }
 .explore button:hover {
   opacity: 0.8;
@@ -573,7 +577,7 @@ i.fas.fa-check-circle {
 }
 .order button {
   border: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
   border-radius: 2rem;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
