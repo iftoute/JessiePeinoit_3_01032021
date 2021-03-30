@@ -50,7 +50,8 @@ i.fas {
     }
 }
 
-@keyframes like {
+//animation coeur
+@keyframes like { 
 0% {
     opacity: 0;
 }
@@ -84,7 +85,6 @@ i.fas {
     animation: slideup 1.8s;
 }
 
-
 @keyframes slideup {
     from {
             opacity: 0;
@@ -97,7 +97,6 @@ i.fas {
 
         }
 }
-
 
 .menu {
     display: flex;
@@ -169,6 +168,7 @@ i.fas.fa-check-circle {
     animation: rotate .5s ease-in-out;   
 }
 
+//animation box check
 @keyframes slidein {
     0% {
         transform: scale(0, 1);
@@ -178,6 +178,7 @@ i.fas.fa-check-circle {
     }
 }
 
+//animation rotation icone check
 @keyframes rotate {
     0% {
         transform: rotate(0);
