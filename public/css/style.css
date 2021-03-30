@@ -13,7 +13,8 @@ h1, h4 {
 h2 {
   font-size: 1.2rem;
   font-weight: 300;
-  padding-left: 15px;
+  margin-left: 30px;
+  margin-top: 50px;
 }
 h2::after {
   content: "";
@@ -447,12 +448,43 @@ footer p {
 /*----------------------------------------------------
                      SECTION MENU
 ----------------------------------------------------*/
+.section__menu {
+  margin-bottom: 70px;
+}
+
+.menu__list.entrees {
+  animation-delay: 0.1s;
+  animation: slideup 0.3s;
+}
+
+.menu__list.plats {
+  animation-delay: 0.1s;
+  animation: slideup 0.9s;
+}
+
+.menu__list.desserts {
+  animation-delay: 0.1s;
+  animation: slideup 1.8s;
+}
+
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .menu {
   display: flex;
   box-shadow: 0 4px 10px #bfbfbf;
   width: 90%;
   margin: auto;
+  margin-top: 20px;
   border-radius: 20px;
+  max-width: 700px;
   cursor: pointer;
 }
 .menu__description {
@@ -492,36 +524,43 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
-  width: 0;
   overflow: hidden;
-}
-.check:hover {
-  width: 50px;
+  transition-duration: 0.5s;
 }
 
 i.fas.fa-check-circle {
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 
-@keyframes translate {
+.menu:hover > .check {
+  width: 20%;
+  transform-origin: right;
+  animation: slidein 0.5s cubic-bezier(0.54, 0.24, 0, 1.01);
+}
+
+.menu:hover .check > i {
+  animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes slidein {
   0% {
-    transform: translate(90px, 0%);
+    transform: scale(0, 1);
   }
   100% {
-    transform: translate(0);
+    transform: scale(1, 1);
   }
 }
 @keyframes rotate {
   0% {
-    transform: rotate(180deg);
+    transform: rotate(0);
   }
   100% {
-    transform: rotate(1turn);
+    transform: rotate(360deg);
   }
 }
 
