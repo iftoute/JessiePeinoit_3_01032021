@@ -320,10 +320,10 @@ section.restaurant {
   font-size: 0.8rem;
   color: #05785b;
 }
-.restaurant .pic {
+.restaurant .pic img {
   border-radius: 20px 20px 0 0;
-  height: 170px;
-  overflow: hidden;
+  height: 250px;
+  width: 100%;
 }
 .restaurant .descriptif {
   position: relative;
