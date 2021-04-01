@@ -90,6 +90,7 @@ i.fas {
 
 .menu {
     display: flex;
+    justify-content: space-between;
     width: 90%;
     margin: auto;
     margin-top: 20px;
@@ -149,7 +150,7 @@ i.fas.fa-check-circle {
     }
 
 .menu:hover > .check {
-    width: 20%;
+    width: 100px;
     transform-origin: right;
     animation: slidein .5s cubic-bezier(.54,.24,0,1.01);
 }

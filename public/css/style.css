@@ -156,6 +156,7 @@ header .fa-arrow-left {
 .location .loc__input input {
   font-size: 1rem;
   padding-left: 20px;
+  max-width: 150px;
 }
 .location .loc__input ::placeholder {
   color: black;
@@ -307,7 +308,7 @@ section.restaurant {
 }
 @media screen and (min-width: 800px) {
   .restaurant .container {
-    width: 60%;
+    width: 50%;
   }
 }
 .restaurant .flag {
@@ -488,6 +489,7 @@ footer p {
 
 .menu {
   display: flex;
+  justify-content: space-between;
   width: 90%;
   margin: auto;
   margin-top: 20px;
@@ -547,7 +549,7 @@ i.fas.fa-check-circle {
 }
 
 .menu:hover > .check {
-  width: 20%;
+  width: 100px;
   transform-origin: right;
   animation: slidein 0.5s cubic-bezier(0.54, 0.24, 0, 1.01);
 }
