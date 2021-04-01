@@ -7,7 +7,7 @@
 ----------------------------------------------------*/
 
 .restaurant__banner img {  /*image bannière header*/
-    max-height: 450px;
+    max-height: 270px;
 }
 
 .restaurant__title {
@@ -22,7 +22,7 @@
     padding-left: 20px;
     padding-right: 20px;
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -66,23 +66,18 @@ i.fas {
   /*----------------------------------------------------
                      SECTION MENU
 ----------------------------------------------------*/
-.section__menu {
-    margin-bottom: 70px;
-}
-
-.menu__list.entrees {
+//animation menu apparition en décalage
+.menu__list {
     animation-delay: .1s;
-    animation: slideup .3s;
-}
-
-.menu__list.plats {
-    animation-delay: .1s;
-    animation: slideup .9s;
-}
-
-.menu__list.desserts {
-    animation-delay: .1s;
-    animation: slideup 1.8s;
+    &.entrees {
+        animation: slideup .3s;
+    }
+    &.plats {
+        animation: slideup .9s; 
+    }
+    &.desserts {
+        animation: slideup 1.8s; 
+    }
 }
 
 @keyframes slideup {
@@ -96,6 +91,11 @@ i.fas {
             transform: translateY(0);
 
         }
+}
+//fin animation menu
+
+.section__menu {
+    margin-bottom: 70px;
 }
 
 .menu {
@@ -117,14 +117,14 @@ i.fas {
         overflow: hidden;
         & .bold {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin: 15px 0;
             text-overflow: ellipsis;
             overflow: hidden;
                 & + p{
                 margin: 0 0 15px 0;
                 font-weight: 300;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 text-overflow: ellipsis;
                 overflow: hidden;       
             }
