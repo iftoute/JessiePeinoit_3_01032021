@@ -1,8 +1,5 @@
 @import "./../utils/variables";
 @import "./../utils/mixins";
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
 
 /*----------------------------------------------------
                      LOADER
@@ -89,6 +86,7 @@ $color-tertiary: #99E2D0;
         input {
             font-size: 1rem;
             padding-left: 20px;
+            max-width: 150px;
         }
         ::placeholder {
             color: black;
@@ -107,34 +105,24 @@ $color-tertiary: #99E2D0;
     &__title {
         padding-bottom: 15px;
     }
-    h2 {
+    h3 {
         margin: 0;
         padding: 0 10px;
+        font-weight: 500;
+        font-size: 1.5rem;
     }
     p {
         font-weight: 100;
     }
     button {
-        border: none;
-        padding: 20px;
-        font-size: 1rem;
-        border-radius: 2rem;
-        background: linear-gradient($color-secondary, $color-primary);
-        color: white;
-        box-shadow: 0 4px 10px rgb(191, 191, 191);
-        &:hover {
-           opacity: 0.8;
-           box-shadow: 0 8px 10px rgb(121, 121, 121);
-           transition: all 0.4s ease-in-out;
+        @include button; //mixin button
+        padding: 20px 30px;
         }
     }
-}
 
   /*----------------------------------------------------
             SECTION OPERATION (FONCTIONNEMENT)
 ----------------------------------------------------*/
-
-/*--section-operation (fonctionnement)--*/
 
 .operation {
     padding: 30px 30px;
@@ -150,7 +138,7 @@ $color-tertiary: #99E2D0;
         @include desktop {
             width: 100%;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
 
@@ -163,8 +151,9 @@ $color-tertiary: #99E2D0;
     margin: 20px auto;
     background: rgb(240, 240, 240);
     position: relative;
-    box-shadow: 0 4px 10px rgb(191, 191, 191);
     max-width: 90%;
+    cursor: pointer;
+    @include boxshadow;
     @include tablette {
         justify-content: center;
     }
@@ -204,39 +193,45 @@ $color-tertiary: #99E2D0;
 section.restaurant {
     background-color: rgb(247, 247, 247);
     padding: 30px 0;
+}
+
+.restaurant.section {
     @include desktop {
         display: flex;
         flex-wrap: wrap;
-     }
-    .restaurant__title {
-        font-size: 1.3rem;
-        padding-left: 30px;
+    }
+}
+
+.restaurant {
+        h3{
+        margin-left: 30px;
+        font-size: 1.5rem;
         @include desktop {
             width: 100%;
             text-align: center;
             font-size: 1.5rem;
+            margin-right: 30px;
         }
     }
-}
-.restaurant {
     .container {
         width: 88%;
         margin: 30px auto;
         border-radius: 20px;
-        box-shadow: 0 2px 20px rgb(191, 191, 191);
         position: relative;
+            @include boxshadow;
             @include desktop {
-                width: 100%;
+                width: 50%;
             }
         }
+      
     .flag {
         position: absolute;
         background-color: #99E2D0;
         padding: 5px 10px;
-        top: 5%;
-        left: 75%;
+        top: 8%;
+        right: 5%;
         font-size: 0.8rem;
-        color: #05785b; 
+        color: #05785b;
     }
     .pic {
         border-radius: 20px 20px 0 0 ;
@@ -260,23 +255,12 @@ section.restaurant {
         position: absolute;
         top: 20%; left: 85%;
             & > i {
-            font-size: 1.5rem;
+            font-size: 2rem;
             background-color: transparent;
         }
 
     i.fas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        opacity: 0;
-        &:hover {
-            opacity: 1;
-            background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: like .4s ease;
-            }
+        @include heart;
         }
     }
 }
@@ -292,5 +276,3 @@ section.restaurant {
         opacity: 1;
     }
 }
-
-
