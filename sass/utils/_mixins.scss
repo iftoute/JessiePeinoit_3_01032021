@@ -1,6 +1,5 @@
 @mixin font-heading {
     font-family: 'Shrikhand', cursive;
-    //font-size: 0.8rem;
 }
 
 @mixin tablette {
@@ -28,4 +27,23 @@
        box-shadow: 0 8px 10px rgb(121, 121, 121);
        transition: all 0.4s ease-in-out;
     }
+}
+
+@mixin boxshadow {
+    box-shadow: 0 4px 10px rgb(191, 191, 191);
+}
+
+@mixin heart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+            background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: like .4s ease;
+        }
 }

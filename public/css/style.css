@@ -233,8 +233,9 @@ header .fa-arrow-left {
   margin: 20px auto;
   background: #f0f0f0;
   position: relative;
-  box-shadow: 0 4px 10px #bfbfbf;
   max-width: 90%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px #bfbfbf;
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .operation__step {
@@ -301,20 +302,20 @@ section.restaurant {
   width: 88%;
   margin: 30px auto;
   border-radius: 20px;
-  box-shadow: 0 2px 20px #bfbfbf;
   position: relative;
+  box-shadow: 0 4px 10px #bfbfbf;
 }
 @media screen and (min-width: 800px) {
   .restaurant .container {
-    width: 75%;
+    width: 60%;
   }
 }
 .restaurant .flag {
   position: absolute;
   background-color: #99E2D0;
   padding: 5px 10px;
-  top: 5%;
-  left: 75%;
+  top: 8%;
+  right: 5%;
   font-size: 0.8rem;
   color: #05785b;
 }
@@ -423,6 +424,7 @@ footer p {
   position: relative;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 .likes > i {
   font-size: 2rem;
@@ -486,12 +488,12 @@ footer p {
 
 .menu {
   display: flex;
-  box-shadow: 0 4px 10px #bfbfbf;
   width: 90%;
   margin: auto;
   margin-top: 20px;
   border-radius: 20px;
   max-width: 700px;
+  box-shadow: 0 4px 10px #bfbfbf;
   cursor: pointer;
 }
 .menu__description {
