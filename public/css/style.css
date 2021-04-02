@@ -280,13 +280,6 @@ section.restaurant {
   padding: 30px 0;
 }
 
-@media screen and (min-width: 800px) {
-  .restaurant.section {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 .restaurant h3 {
   margin-left: 30px;
   font-size: 1.5rem;
