@@ -195,13 +195,6 @@ section.restaurant {
     padding: 30px 0;
 }
 
-.restaurant.section {
-    @include desktop {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
 .restaurant {
         h3{
         margin-left: 30px;
