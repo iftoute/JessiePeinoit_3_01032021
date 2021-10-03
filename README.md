@@ -8,13 +8,13 @@ Vous pouvez retrouver le <a href="https://s3.eu-west-1.amazonaws.com/course.oc-s
 * développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques
 * Permettre la réservation en ligne et la composition de menus
 
-### Technologies
+### Technologies utilisées pour le projet
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
 
 ### Tester le projet
 https://iftoute.github.io/JessiePeinoit_3_01032021/
 
-###Livrables
+### Livrables
 * Pages à intégrer selon les maquettes
 * Page d’accueil
 * Pages de menu (x4)
