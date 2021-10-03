@@ -1,4 +1,4 @@
-Voici le troisième projet dans le cadre de la formation de "Développeur web" avec OpenClassroom. 
+Voici le troisième projet réalisé dans le cadre de la formation de "Développeur web" avec OpenClassroom. 
 
 L'objectif était d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass
 
